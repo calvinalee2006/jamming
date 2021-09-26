@@ -36,3 +36,7 @@
     color: rgba(256, 256, 256, 0.8);
   }
   
+.play-action {
+ margin-left: 1px;
+ background-color:purple;
+}

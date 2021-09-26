@@ -1,6 +1,6 @@
 import React from 'react';
 import './Track.css';
-import playlogo from 'playButton.png';
+import playlogo from './playButton.png';
 
  export class Track extends React.Component {
     constructor(props) {
@@ -23,7 +23,7 @@ import playlogo from 'playButton.png';
 
     previewTrack() {
         if(this.props.track.preview) {
-            return <button className="Track-action" onClick={this.previewTrack}><img src={playlogo} /></button>
+            return <button className="play-action" onClick={this.audioPreview()} ><img src={playlogo} /></button>
         }
     }
 
