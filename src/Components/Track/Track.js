@@ -23,10 +23,13 @@ import playlogo from './playButton.png';
 
     previewTrack() {
         if(this.props.track.preview) {
-            return <button className="play-action" onClick={this.audioPreview()} ><img src={playlogo} /></button>
+            return <button className="play-action" onClick={this.audioPreview()} >
+                <img src={playlogo} />
+                </button>
         }
     }
 
+    
 
     addTrack() {
         this.props.onAdd(this.props.track);
@@ -40,6 +43,8 @@ import playlogo from './playButton.png';
       const audio = new Audio(this.props.track.preview)
       audio.play();
     }
+
+    
 
     render() {
         return (
