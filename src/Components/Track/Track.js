@@ -1,5 +1,6 @@
 import React from 'react';
 import './Track.css';
+import playlogo from 'playButton.png';
 
  export class Track extends React.Component {
     constructor(props) {
@@ -22,7 +23,7 @@ import './Track.css';
 
     previewTrack() {
         if(this.props.track.preview) {
-            return <button className="Track-action" onClick={this.previewTrack}><img src='PlayButton' /></button>
+            return <button className="Track-action" onClick={this.previewTrack}><img src={playlogo} /></button>
         }
     }
 
@@ -48,7 +49,7 @@ import './Track.css';
                     <p>{this.props.track.artist} | {this.props.track.album}  </p>
                 </div>
                 {this.renderAction()}
-                {this.previewTrack}
+                {this.previewTrack()}
             </div>
         )
     }
