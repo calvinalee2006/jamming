@@ -23,7 +23,7 @@ import playlogo from './playButton.png';
 
     previewTrack() {
         if(this.props.track.preview) {
-            return <button className="play-action" onClick={this.audioPreview()} >
+            return <button className="play-action" onClick={this.audioPreview} >
                 <img src={playlogo} />
                 </button>
         }
