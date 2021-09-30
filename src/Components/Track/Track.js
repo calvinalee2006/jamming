@@ -23,7 +23,7 @@ import playlogo from './playButton.png';
 
     previewTrack() {
         if(this.props.track.preview) {
-            return <button className="play-action" onClick={this.audioPreview} >
+            return <button className="play-action" onClick={() => this.props.handlePlayPreview(this.props.track.preview)} >
                 <img alt="play button for music" src={playlogo} />
                 </button>
         }
@@ -39,10 +39,11 @@ import playlogo from './playButton.png';
         this.props.onRemove(this.props.track);
     }
 
-    audioPreview = () => {
-      const audio = new Audio(this.props.track.preview)
-      audio.play();
-    }
+    // audioPreview = () => {
+    //   const audio = new Audio(this.props.track.preview)
+    //   audio.play();
+    // }
+    // logic will be handle by handlePlayPreview in app.js
 
    
 
