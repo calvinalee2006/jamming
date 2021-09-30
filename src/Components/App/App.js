@@ -22,6 +22,7 @@ class App extends React.Component {
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
     this.savePlaylist = this.savePlaylist.bind(this);
     this.search = this.search.bind(this);
+    this.audio = new Audio();
   }
 
   addTrack(track) {
@@ -60,7 +61,13 @@ class App extends React.Component {
       this.setState({searchResults: searchResults})
     })
   }
+ 
+  handlePlayPreview(preview_url) {
+    handlePlayPreview  = props.searchResult.tracklist.track;
 
+    this.audio.src=preview_url
+      this.audio.play();
+  }
  
   render() {
     return (

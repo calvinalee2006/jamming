@@ -41,17 +41,8 @@ import playlogo from './playButton.png';
 
     audioPreview = () => {
       const audio = new Audio(this.props.track.preview)
-        audio.play();
-        audio.pause();
-
-
-      if (audio) {
-          this.state.play();
-      }else{
-          this.state.pause();
-        }
-        this.setState({Audio: !Audio       })
-    };
+      audio.play();
+    }
 
    
 
