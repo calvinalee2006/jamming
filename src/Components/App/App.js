@@ -63,10 +63,11 @@ class App extends React.Component {
   }
  
   handlePlayPreview(preview_url) {
-    handlePlayPreview  = props.searchResult.tracklist.track;
+
+    // handlePlayPreview  = props.searchResult.tracklist.track;
 
     this.audio.src=preview_url
-      this.audio.play();
+    this.audio.play();
   }
  
   render() {
@@ -77,7 +78,9 @@ class App extends React.Component {
     <SearchBar onSearch={this.search} /> 
     <div className="App-playlist">
       <SearchResults searchResults={this.state.searchResults}
-        onAdd={this.addTrack} /> 
+        onAdd={this.addTrack}
+        handlePlayPreview = {this.handlePlayPreview}
+         /> 
       <Playlist playstName={this.state.playlistName}
         playlistTracks={this.state.playlistTracks} 
         onRemove = {this.removeTrack}
