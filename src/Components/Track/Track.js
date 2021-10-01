@@ -39,9 +39,9 @@ import playlogo from './playButton.png';
         this.props.onRemove(this.props.track);
     }
 
-    audioPreview = () => {
-      const audio = new Audio(this.props.track.preview)
-      audio.play();
+    audioPreview() {
+        this.audio
+      
     }
 
    

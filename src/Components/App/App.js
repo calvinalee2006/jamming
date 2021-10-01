@@ -63,7 +63,7 @@ class App extends React.Component {
   }
  
   handlePlayPreview(preview_url) {
-    handlePlayPreview  = props.searchResult.tracklist.track;
+    this.handlePlayPreview().searchResult.track;
 
     this.audio.src=preview_url
       this.audio.play();
